@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.loader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+video {
+  position: absolute;
+}
+#nin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+svg {
+  fill: none;
+  width: 500px;
+  stroke-width: 80px;
+}
+path {
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+}
+.main-bg > path {
+  stroke: #fff;
+  animation: path var(--duration) ease forwards;
+  animation-delay: 7s;
+}
+.main > path {
+  stroke: rgb(196, 1, 1);
+  animation: path var(--duration) ease-in forwards;
+  animation-delay: 7s;
+}
+.main-bg > .cir {
+  animation: path 2s forwards;
+  animation-delay: 8s;
+}
+.main > .cir {
+  animation: path 2s forwards;
+  animation-delay: 8.5s;
+}
+
+@keyframes path {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

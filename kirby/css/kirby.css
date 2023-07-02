@@ -1,0 +1,234 @@
+@charset "utf-8";
+@font-face {font-family: kirby; src: url(../font/Jua-Regular.ttf);}
+*,*::after,*::before {box-sizing: border-box;}
+a {text-decoration: none;color: inherit;}
+*{font-family: "kirby", "sans-serif";letter-spacing: 2px;}
+
+/* 커비 헤더 */
+.kirby-header {position: relative;height: 270px;}
+.kirby-header img:first-child {width: 100%;height: 270px;}
+.kirby-head {position: absolute;bottom: -250px;left: 50%;transform: translateX(-50%);}
+.kirby-hand {position: absolute;bottom: -30px;left: 50%;transform: translateX(-50%);z-index: 2;}
+
+/* 퀵 메뉴 */
+#quick {position: fixed;width: 80px;height: 80px;top: 10px;right: 10px;cursor: pointer;z-index: 1500;}
+#quick:hover {height: 340px;}
+#quick:hover .mquick2 {animation: drop2 .4s ease-in-out forwards;}
+#quick:hover .mquick3 {animation: drop3 .4s ease-in-out forwards;animation-delay: .2s;}
+#quick:hover .mquick4 {animation: drop4 .4s ease-in-out forwards;animation-delay: .4s;}
+.mquick {position: absolute;width: 80px;height: 80px;}
+.mquick img {width: 100%;}
+.mquick1 {z-index: 1504;}
+.mquick2 {z-index: 1503;scale: 0;}
+.mquick3 {z-index: 1502;scale: 0;}
+.mquick4 {z-index: 1501;scale: 0;}
+@keyframes drop2 {
+    0%{top:0;}
+    50%{scale: 1;
+        top: 85px;}
+    60%{top: 70px;}
+    100%{top: 85px;
+         scale: 1;}
+}
+@keyframes drop3 {
+    0%{top:0;}
+    50%{scale: 1;
+        top: 170px;}
+    60%{top: 155px;}
+    100%{top: 170px;
+         scale: 1;}
+}
+@keyframes drop4 {
+    0%{top:0;}
+    50%{scale: 1;
+        top: 255px;}
+    60%{top: 240px;}
+    100%{top: 255px;
+         scale: 1;}
+}
+
+/* 커비 배너 */
+.kirby-banner {position: relative;}
+.kirby-text {position: absolute;top: 0;left: 50%;transform: translateX(-50%);z-index:2;width: 200px;}
+.swiper-slide img {height: 670px;} 
+
+/* 커비 게임 */
+.kirby-games {width: 100%;height:100vh;position: relative;padding: 20px;background: url(../img/games-background.png) no-repeat center;background-size: cover;}
+.kirby-games::before {content: "";position: absolute;top: 0;right: 0;left: 0;bottom: 0;opacity: .4;background-color: #000;}
+.kirby-games>h2 {position: relative;font-size: 55px;margin: 70px 0;text-align: center;color: #fff;letter-spacing: 10px;}
+.article-wrapper {position: relative;width: 80%;margin: 0 auto;height: 100vh;z-index: 2;}
+.games-article {width: 30%;}
+.article-wrapper article:nth-child(1) {position: absolute;top: 30%;left: 3%;}
+.article-wrapper article:nth-child(2) {position: absolute;top: 30%;left: 36%;}
+.article-wrapper article:nth-child(3) {position: absolute;top: 30%;left: 69%;}
+.games-img {position: relative;width: 80%;margin: 0 auto;}
+.games-img img {border-radius: 10%;box-shadow: 5px 5px 5px;opacity: 0;position: absolute;top: -280px;left: 60%;width: 0;}
+
+.games-title {padding: 15px;text-indent: 10px;opacity: 0;}
+.games-title h2 {font-size: 32px;padding: 20px 0;color: #fff;font-weight: normal;}
+.games-title img {width: 30px;}
+.games-title ul li {display: flex;align-items: center;padding: 5px 0;}
+.games-title ul li span {color: #fff;font-size: 23px;}
+
+/* 커비 캐릭터 애니메이션 */
+.kirby-games .small1 {position: absolute;right: 15px;top: -200px;z-index: 3;animation: small1 3s infinite alternate ease-in-out}
+.kirby-games .small2 {position: absolute;left: 50px;bottom: -150px;z-index: 2;animation: small2 3s infinite alternate ease-in-out;}
+.kirby-games .small3 {position: absolute;right: 50px;bottom: -50px;z-index: 2;animation: small3 4s infinite alternate linear;}
+
+
+@keyframes small1 {
+    from{top: -500px;}
+    to{top: -200px;}
+}
+
+@keyframes small2 {
+    0%,100% {transform: rotate(-20deg);}
+    50% {transform: rotate(0deg);}
+}
+
+@keyframes small3 {
+    0%{
+        transform: scale(1) rotate(0deg);
+    }
+    20%{
+        transform: scale(.6) rotate(72deg);
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+    40%{
+        transform: scale(.4) rotate(144deg);
+        margin-right: 150px;
+        margin-bottom: 100px;
+    }
+    60%{
+        transform: scale(.9) rotate(216deg);
+        margin-right: 200px;
+        margin-bottom: 75px;
+    }
+    80%{
+        transform: scale(1.2) rotate(288);
+        margin-right: 250px;
+        margin-bottom: 50px;
+    }
+    100%{
+        transform: scale(1.5) rotate(360deg);
+        margin-right: 300px;
+        margin-bottom: 0;
+    }
+}
+
+/* 버블 애니메이션 */
+.bubble-box {position: relative;}
+.bubble {position: absolute;width: 200px;height: 200px;border-radius: 50%;box-shadow: inset 0 0 25px rgba(255, 255, 255, .9);animation: bubble 8s ease-in-out infinite;left: 350px;bottom: 450px;z-index: 3;}
+.bubble:nth-child(5) {position: relative;zoom: .5;left: 900px;bottom: 1250px;animation-delay: -5s;z-index: 3;}
+.bubble:nth-child(2) {position: relative;zoom: .45;left: 850px;bottom: 870px;animation-delay: -4s;z-index: 3;}
+.bubble:nth-child(4) {position: relative;zoom: .35;left: 950px;bottom: 1200px;animation-delay: -3s;z-index: 3;}
+.bubble:nth-child(3) {position: relative;zoom: .25;left: 1100px;bottom: 1050px;animation-delay: -6s;z-index: 3;}
+.bubble span {position: absolute;border-radius: 50%;}
+.bubble span:nth-child(1) {inset: 10px;border-left: 15px solid #0fb4ff;filter: blur(8px);}
+.bubble span:nth-child(2) {inset: 10px;border-right: 15px solid #ff4484;filter: blur(8px);}
+.bubble span:nth-child(3) {inset: 20px;border-top: 15px solid #ffeb3b;filter: blur(8px);}
+.bubble span:nth-child(4) {inset: 30px;border-left: 15px solid #ff4484;filter: blur(12px);}
+.bubble span:nth-child(5) {inset: 10px;border-bottom: 10px solid #fff;filter: blur(8px);transform: rotate(330deg);}
+.bubble::before {content: "";position: absolute;top: 50px;left: 45px;width: 30px;height: 30px;border-radius: 50%;background: #fff;z-index: 5;filter: blur(2px);}
+.bubble::after {content: "";position: absolute;top: 80px;left: 80px;width: 20px;height: 20px;border-radius: 50%;background: #fff;z-index: 5;filter: blur(2px);}
+@keyframes bubble {
+    0%,100%{transform: translateY(-100px);}
+    50%{transform: translateY(100px);}
+}
+
+/* 커비 캐릭터 소개 */
+.kirby-characters {width: 100%;background: url(../img/characters-background.png) no-repeat center;background-size: cover;position: relative;padding-bottom: 50px;}
+.kirby-characters>h2 {font-size: 55px;padding: 70px 0;text-align: center;color: #fff;letter-spacing: 10px;}
+.character-box ul li {float: left;margin-left: 30px;margin-top: 200px;}
+.character-box img {width: 200px;}
+.character-big {position: absolute;right: 100px;top: 50%;transform: translateY(-50%);}
+.character-big img {width: 700px;}
+.characters-intro {width: 80%;margin: 0 auto;}
+.kirby-intro {color: #1423a5;;}
+.kirby-intro h2 {font-size: 40px;padding-bottom: 70px;}
+.kirby-intro p {line-height: 30px;font-size: 30px;padding: 10px 0;margin-bottom: 40px;}
+.kirby-intro p:last-child {margin-bottom: 0;}
+
+/* 커비 뉴스 */
+.kirby-news {width: 100%;background: url(../img/news-background.png) no-repeat center;background-size: cover;position: relative;padding-bottom: 100px;}
+.news-main {display: flex;justify-content: space-between;width: 80%;margin: 0 auto;}
+.news1 {width: 50%;padding: 140px 0;}
+.news-article {width: 40%;color: #071169;}
+.news-article h2 {text-align: center;padding-top: 30px;;font-size: 45px;}
+.news-article ul {padding-top: 40px;}
+.news-article ul li {font-size: 16px;font-weight: bold;height: 70px;line-height: 70px;text-indent: 25px;border-bottom: 1px solid #071169;}
+.news-article ul li a {letter-spacing: 0;}
+
+/* 커비 뉴스 호버 > 이미지 */
+.news-article ul li {position: relative;}
+.news-article ul li img {position: absolute;left: 50%;top: -100px;transform: rotate(-25deg) scale(0);opacity: 0;transition: all 1s ease-in-out;z-index: 3;}
+.news-article ul li:hover img {transform: rotate(-725deg) scale(1);opacity: 1;}
+
+
+
+
+
+
+.small4 {width: 200px;position: absolute;left: 30px;top: -50px;}
+.small5 {width: 200px;position: absolute;right: 20px;top: -50px;}
+.small6 {width: 250px;position: absolute;left: 10px;bottom: -20px;z-index: 2;animation: small6 3s infinite alternate-reverse;}
+.small7 {width: 250px;position: absolute;right: 150px;bottom: -50px;z-index: 2;animation: small7 3s infinite linear;}
+.small8 {width: 400px;position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);}
+
+@keyframes small6 {
+    0% {margin-left: 300px;}
+    100% {margin-left: 0;}
+}
+@keyframes small7 {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.3);}
+    40% {transform: scale(0.8);}
+    60% {transform: scale(1.2);}
+    80% {transform: scale(0.9);}
+    100% {transform: scale(1);}
+}
+
+
+/* 커비 푸터 */
+.kirby-footer {width: 100%;height: 100vh;position: relative;background: url(../img/footer-background.png) no-repeat center;background-size: cover;}
+.kirby-footer::before {content: "";position: absolute;top: 0;right: 0;left: 0;bottom: 0;opacity: .6;background-color: #000;}
+.footer-content {position:relative;width: 80%;margin: 0 auto;color: rgba(255,255,255,0.7);font-size: 20px;}
+.footer-content>p {padding: 60px 0;}
+.footer-top>ul {display: flex;justify-content: space-between;}
+.footer-top>ul>li {width: 30%;}
+.content-menu {display: flex;}
+.content-menu li {border: 1px solid #fff;border-radius: 10px;}
+.content-menu li:first-child {width: 100px;height: 100px;text-align: center;line-height: 100px;font-size: 50px;}
+.content-menu li:last-child {width: 250px;height: 100px;text-align: center;line-height: 100px;border-left: none;}
+.footer-bottom {margin: 100px 0;}
+.footer-bottom>ul {display: flex;justify-content: flex-start;}
+.footer-bottom>ul>li {width: 23%;font-size: 23px;}
+.footer-bottom>ul>li>ul>li {height: 50px;line-height: 50px;font-weight: normal;}
+.scrolltop {position: absolute;right: 3%;bottom: 50px;cursor: pointer;text-align: center;}
+.scrolltop p {color: #000;font-weight: bold;position: relative;top: 44px;z-index: 2;}
+.scrolltop img {width: 70px;animation: scrolltop 3s infinite linear;}
+
+/* 스크롤 탑 애니메이션 */
+@keyframes scrolltop{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+
+.small9 {width: 200px;position: absolute;left: 50px;bottom: 10px;}
+.small10 {width: 200px;position: absolute;right: 50px;bottom: 150px;}
+
+/* 마우스 커서 변경 */
+html{cursor: url(../img/kirby-cursor5.png) ,auto;}
+.followAnimation {position: fixed;top: 0;left: 0;will-change: transform;z-index: 2;/*엘리먼트에 어떠한 변경을 할 것인지 미리 브라우저에게 알려줌-깜빡임 없애고 속도등 효율==>부드러운 화면처리=>최적화(성능저하 방지)*/;display: block;}
+.followAnimation img {width: 50px;}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  background: var(--bg);
+}
+.m {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 80px auto;
+}
+#map .mmap {
+  position: absolute;
+  background: url(../img/gamebg10.png) no-repeat;
+  background-size: cover;
+  width: 80%;
+  height: 70%;
+  top: 20%;
+  border-radius: 0 20px 20px 0;
+}
+
+.poket {
+  position: absolute;
+  cursor: pointer;
+}
+.poket img {
+  width: 100%;
+}
+.poket1 {
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  animation: up1 3s ease-in-out infinite;
+}
+.poket2 {
+  width: 150px;
+  height: 150px;
+
+  right: 10%;
+  animation: up2 4s ease-in-out infinite;
+}
+.poket3 {
+  width: 120px;
+  height: 120px;
+
+  right: 30%;
+  animation: up3 2.5s ease-in-out infinite;
+}
+.poket4 {
+  width: 180px;
+  height: 180px;
+
+  right: 15%;
+  animation: up4 2.5s ease-in-out infinite;
+}
+.poket5 {
+  width: 100px;
+  height: 100px;
+
+  right: 30%;
+  animation: up5 2s ease-in-out infinite;
+}
+.poket6 {
+  width: 200px;
+  height: 200px;
+
+  right: 20%;
+  animation: up6 3s ease-in-out infinite;
+}
+@keyframes up1 {
+  0% {
+    top: 35%;
+  }
+
+  50% {
+    top: 28%;
+  }
+  100% {
+    top: 35%;
+  }
+}
+@keyframes up2 {
+  0% {
+    top: 10%;
+  }
+
+  50% {
+    top: 18%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes up3 {
+  0% {
+    top: 5%;
+  }
+
+  50% {
+    top: 13%;
+  }
+  100% {
+    top: 5%;
+  }
+}
+@keyframes up4 {
+  0% {
+    top: 50%;
+  }
+
+  50% {
+    top: 60%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes up5 {
+  0% {
+    top: 44%;
+  }
+
+  50% {
+    top: 53%;
+  }
+  100% {
+    top: 44%;
+  }
+}
+@keyframes up6 {
+  0% {
+    top: 23%;
+  }
+
+  50% {
+    top: 33%;
+  }
+  100% {
+    top: 23%;
+  }
+}
+.mcard {
+  position: absolute;
+  width: 23%;
+  top: 0;
+  left: 0;
+}
+.mcard img {
+  width: 100%;
+}
+.mcard1 {
+  top: 13%;
+  left: 43%;
+  scale: 0;
+}
+.mcard2 {
+  top: -13%;
+  left: 73%;
+  scale: 0;
+}
+.mcard3 {
+  top: -20%;
+  left: 54%;
+  scale: 0;
+}
+.mcard4 {
+  top: 29%;
+  left: 67%;
+  scale: 0;
+}
+.mcard5 {
+  top: 20%;
+  left: 56%;
+  scale: 0;
+}
+.mcard6 {
+  top: 11%;
+  left: 62%;
+  scale: 0;
+}
+.bubble:hover > .mcard {
+  animation: left 1s ease-in-out forwards;
+}
+@keyframes left {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+    transform: rotate(720deg);
+    left: 0;
+    top: 0;
+  }
+}

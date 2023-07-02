@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "pok";
+  src: url(../img/Lato-Black.ttf);
+}
+* {
+  font-family: "pok";
+  cursor: url(../img/pica.png), auto;
+}
+#quick {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  z-index: 1500;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+#quick:hover {
+  height: 340px;
+}
+#quick:hover .mquick2 {
+  animation: drop2 0.4s ease-in-out forwards;
+}
+#quick:hover .mquick3 {
+  animation: drop3 0.4s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+#quick:hover .mquick4 {
+  animation: drop4 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.mquick {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.mquick img {
+  width: 100%;
+}
+.mquick1 {
+  z-index: 1504;
+}
+.mquick2 {
+  z-index: 1503;
+  scale: 0;
+}
+.mquick3 {
+  z-index: 1502;
+  scale: 0;
+}
+.mquick4 {
+  z-index: 1501;
+  scale: 0;
+}
+@keyframes drop2 {
+  0% {
+    top: 0;
+  }
+  50% {
+    scale: 1;
+    top: 85px;
+  }
+  60% {
+    top: 70px;
+  }
+  100% {
+    top: 85px;
+    scale: 1;
+  }
+}
+@keyframes drop3 {
+  0% {
+    top: 0;
+  }
+  50% {
+    scale: 1;
+    top: 170px;
+  }
+  60% {
+    top: 155px;
+  }
+  100% {
+    top: 170px;
+    scale: 1;
+  }
+}
+@keyframes drop4 {
+  0% {
+    top: 0;
+  }
+  50% {
+    scale: 1;
+    top: 255px;
+  }
+  60% {
+    top: 240px;
+  }
+  100% {
+    top: 255px;
+    scale: 1;
+  }
+}
+
+.cube1 {
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.cube1 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube1 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#151515, #f0dc06);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+}
+.top1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #222;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.top1 img {
+  margin-top: 37px;
+  width: 100%;
+}
+
+.top1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #ffea06;
+  transform: translateZ(-300px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(255, 234, 6, 0.2), 0 0 200px rgba(255, 234, 6, 0.4),
+    0 0 300px rgba(255, 234, 6, 0.6), 0 0 400px rgba(255, 234, 6, 0.8),
+    0 0 500px rgba(0, 255, 0, 0.1);
+}
+
+.cube2 {
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.cube2 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube2 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#151515, #ff5e14);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+}
+.top2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #222;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.top2 img {
+  width: 90%;
+}
+
+.top2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #ff5e14;
+  transform: translateZ(-300px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(255, 92, 17, 0.2), 0 0 200px rgba(255, 92, 17, 0.4),
+    0 0 300px rgba(255, 92, 17, 0.6), 0 0 400px rgba(255, 92, 17, 0.8),
+    0 0 500px rgba(255, 92, 17, 0.1);
+}
+.cube3 {
+  position: absolute;
+  top: -20%;
+  right: 7%;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.cube3 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube3 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#151515, #13e3ff);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+}
+.top3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #222;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.top3 img {
+  margin-top: 28px;
+  margin-left: 10px;
+  width: 90%;
+}
+
+.top3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #13e3ff;
+  transform: translateZ(-300px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(17, 239, 255, 0.2),
+    0 0 200px rgba(17, 239, 255, 0.4), 0 0 300px rgba(17, 239, 255, 0.6),
+    0 0 400px rgba(17, 239, 255, 0.8), 0 0 500px rgba(17, 239, 255, 0.1);
+}
+
+.cube4 {
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.cube4 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube4 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#151515, #00ec00);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+}
+.top4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #222;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.top4 img {
+  width: 90%;
+}
+
+.top4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #0f0;
+  transform: translateZ(-300px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(0, 255, 0, 0.2), 0 0 200px rgba(0, 255, 0, 0.4),
+    0 0 300px rgba(0, 255, 0, 0.6), 0 0 400px rgba(0, 255, 0, 0.8),
+    0 0 500px rgba(0, 255, 0, 0.1);
+}

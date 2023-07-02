@@ -1,0 +1,376 @@
+<?
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nintendo</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/intro2.css" />
+    <link rel="stylesheet" href="css/nin5.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/intro2.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div class="loader">
+      <video src="img/intro.mp4" type="video/mp4" autoplay muted></video>
+      <div id="nin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 0 1296.54 417">
+          <defs>
+            <clipPath id="01">
+              <path
+                class="cls-1"
+                d="M79.41,130H130l70.82,105.55V130h50.44V281.33H200.81l-71-105.55V281.33H79.41Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="02">
+              <path
+                class="cls-1"
+                d="M278.75,130.76H328v30.81H278.75Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="03">
+              <path
+                class="cls-1"
+                d="M278.83,181.88H327.9V282.45H278.83Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="04">
+              <path
+                class="cls-1"
+                d="M444.73,176c18.76,0,54.62,11.36,54.32,50.45V281.3H450.28V215.17c0-8.76-9.06-18.58-22.5-18.58s-23.41,9.82-23.41,18.58c0,4.22.15,66.13.15,66.13H355.75l-.15-100.71h48.92v10.57A60.49,60.49,0,0,1,444.73,176Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="05">
+              <path
+                class="cls-1"
+                d="M526.79,180.13H500.21V165.18h26.58V144.8H576v20.38h26.42v14.95H576V280.55H526.79Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="06">
+              <path
+                class="cls-1"
+                d="M737,245.92c-8.6,23.71-36.54,41.23-69.76,41.23-40,0-72.33-25.22-72.33-56.48s32.32-56.47,72.33-56.47,72.48,25.82,72.48,57.08H647.17V252c0,18.43,13.29,22.5,20.53,22.5s20.39-4.07,20.39-22.5a45.79,45.79,0,0,0-.15-6ZM667.7,186.58c-7.24,0-20.53,4.08-20.53,22.5v6.49h41.07c0-1.09-.15-.9-.15-6.49C688.09,190.66,675,186.58,667.7,186.58Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="07">
+              <path
+                class="cls-1"
+                d="M843.73,176c18.76,0,54.62,11.36,54.32,50.45V281.3H849.28V215.17c0-8.76-9.06-18.58-22.5-18.58s-23.41,9.82-23.41,18.58c0,4.22.16,66.13.16,66.13H754.75l-.15-100.71h48.93v10.57A60.44,60.44,0,0,1,843.73,176Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="08">
+              <path
+                class="cls-1"
+                d="M1004.09,185.34V129.62h48.77v151.3h-48.77V275a64.64,64.64,0,0,1-32.31,8.7,61.67,61.67,0,0,1-24.32-4.92c-4.38-2-33.67-14.8-33.67-49.84,0-25.34,24.59-52.89,57.66-52.89C985.51,176.08,995.2,180.72,1004.09,185.34Zm.3,26.72c-.06-15.55-11.47-19.48-19.18-19.48s-19.32,3.93-19.32,19.48V248c0,15.55,11.47,19.63,19.32,19.63s19.33-4.08,19.33-19.63Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="09">
+              <path
+                class="cls-1"
+                d="M1212.2,231.67c0,31.26-32.16,56.48-71.87,56.48s-71.88-25.22-71.88-56.48,32.16-56.47,71.88-56.47S1212.2,200.42,1212.2,231.67ZM1140,275.61c9.82,0,20.09-6.64,20.09-22.65V210.23c0-16-10.27-22.5-20.09-22.5s-20,6.5-20.08,22.5l-.15,42.73C1119.79,269,1130.21,275.61,1140,275.61Z"
+                transform="translate(-10.26 -9)"
+              />
+            </clipPath>
+            <clipPath id="10">
+              <path
+                class="cir"
+                d="M1103.09,15H270.79C143.88,15,41,105.89,41,218h0c0,112.11,102.88,203,229.79,203h832.3c126.91,0,229.79-90.89,229.79-203h0C1332.88,105.89,1230,15,1103.09,15Zm203.17,203c0,100.49-92.22,182-206,182H273.59c-113.75,0-206-81.47-206-182h0c0-100.49,92.22-182,206-182h826.69c113.76,0,206,81.47,206,182Z"
+                transform="translate(-38.26 -10)"
+              />
+            </clipPath>
+          </defs>
+
+          <g class="main-bg">
+            <path
+              clip-path="url(#01)"
+              class="cls-2"
+              d="M102,289c-8.58-78.25-13.41-160.24,5-165,28.34-7.33,89.67,174.17,116,167,10.69-2.91,16.88-37.3-1-171"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#02)"
+              class="cls-3"
+              d="M303.5,124.5v32"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#03)"
+              class="cls-3"
+              d="M302.5,175.5q-.5,57-1,114"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#04)"
+              class="cls-3"
+              d="M378.5,175.5c-1,90.48-1.63,113-2,113-.59,0-11.36-58.73,19-87,18.52-17.24,52.36-23.15,69-9,8.64,7.35,10.38,18.17,13,36a180,180,0,0,1-2,63"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#05)"
+              class="cls-4"
+              d="M500,171c55.42-1.27,101.92-1.82,102,0,.1,2.09-61.32,2.34-63,15-.64,4.87,7.53,11.59,12,10,10.81-3.84,2.22-57.09,0-57-2.68.11-1.55,77.74,0,149"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#06)"
+              class="cls-3"
+              d="M637,222c67.65,10.31,79.89,2.76,82-3,4.09-11.18-21.61-38.45-52-39-22.83-.41-48.63,14.25-54,39-6.53,30.14,20.2,61.61,50,62,18.28.24,35.81-11.24,46-29"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#07)"
+              class="cls-3"
+              d="M778.09,174.57c-1,90.49-1.63,113-2,113-.59,0-11.36-58.73,19-87,18.53-17.24,52.36-23.15,69-9,8.64,7.35,10.39,18.18,13,36a180,180,0,0,1-2,63"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#08)"
+              class="cls-3"
+              d="M1010,197c-22.63-16.69-53.91-10.19-67,11-14.73,23.85.49,55.16,20,64,24.84,11.26,56.26-14.07,69-37,22.14-39.84.28-94.69-5-94-3.45.45-5.06,25.22,3,132"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#09)"
+              class="cls-3"
+              d="M1143.5,180.5c-26.78-1.92-48.44,21.55-51,46-2.9,27.69,18.67,56.81,47,57,27.26.19,48.56-26.48,48-53C1187,207.05,1169.41,182.36,1143.5,180.5Z"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#10)"
+              class="cir"
+              d="M35.5,234.5c-6-65.14,26.19-112.82,35-125,60.94-84.27,168.36-81.42,178-81l853-3c17.91,1.44,102.74,10.18,158,81,9.57,12.26,35.12,45.9,40,96,9.07,93.1-61.73,155.65-68,161-49.61,42.38-106,46.47-125,47l-869,1c-20.9-.57-64.83-4.66-109-33C110.71,367.08,43.38,320,35.5,234.5Z"
+              transform="translate(-19.26 -10)"
+            />
+          </g>
+          <g class="main">
+            <path
+              clip-path="url(#01)"
+              class="cls-2"
+              d="M102,289c-8.58-78.25-13.41-160.24,5-165,28.34-7.33,89.67,174.17,116,167,10.69-2.91,16.88-37.3-1-171"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#02)"
+              class="cls-3"
+              d="M303.5,124.5v32"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#03)"
+              class="cls-3"
+              d="M302.5,175.5q-.5,57-1,114"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#04)"
+              class="cls-3"
+              d="M378.5,175.5c-1,90.48-1.63,113-2,113-.59,0-11.36-58.73,19-87,18.52-17.24,52.36-23.15,69-9,8.64,7.35,10.38,18.17,13,36a180,180,0,0,1-2,63"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#05)"
+              class="cls-4"
+              d="M500,171c55.42-1.27,101.92-1.82,102,0,.1,2.09-61.32,2.34-63,15-.64,4.87,7.53,11.59,12,10,10.81-3.84,2.22-57.09,0-57-2.68.11-1.55,77.74,0,149"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#06)"
+              class="cls-3"
+              d="M637,222c67.65,10.31,79.89,2.76,82-3,4.09-11.18-21.61-38.45-52-39-22.83-.41-48.63,14.25-54,39-6.53,30.14,20.2,61.61,50,62,18.28.24,35.81-11.24,46-29"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#07)"
+              class="cls-3"
+              d="M778.09,174.57c-1,90.49-1.63,113-2,113-.59,0-11.36-58.73,19-87,18.53-17.24,52.36-23.15,69-9,8.64,7.35,10.39,18.18,13,36a180,180,0,0,1-2,63"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#08)"
+              class="cls-3"
+              d="M1010,197c-22.63-16.69-53.91-10.19-67,11-14.73,23.85.49,55.16,20,64,24.84,11.26,56.26-14.07,69-37,22.14-39.84.28-94.69-5-94-3.45.45-5.06,25.22,3,132"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#09)"
+              class="cls-3"
+              d="M1143.5,180.5c-26.78-1.92-48.44,21.55-51,46-2.9,27.69,18.67,56.81,47,57,27.26.19,48.56-26.48,48-53C1187,207.05,1169.41,182.36,1143.5,180.5Z"
+              transform="translate(-10.26 -9)"
+            />
+            <path
+              clip-path="url(#10)"
+              class="cir"
+              d="M35.5,234.5c-6-65.14,26.19-112.82,35-125,60.94-84.27,168.36-81.42,178-81l853-3c17.91,1.44,102.74,10.18,158,81,9.57,12.26,35.12,45.9,40,96,9.07,93.1-61.73,155.65-68,161-49.61,42.38-106,46.47-125,47l-869,1c-20.9-.57-64.83-4.66-109-33C110.71,367.08,43.38,320,35.5,234.5Z"
+              transform="translate(-19.26 -10)"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="intro-wrapper">
+      <header>
+        <h2><img src="img/nintendo-logo.png" alt="logo" /></h2>
+        <ul class="cf">
+          <li>
+            <a href="#"><img src="img/header-mario.png" alt="mario" /></a>
+          </li>
+          <li><? include "top_login1.php"; ?></li>
+        </ul>
+      </header>
+
+      <section class="intro-contents">
+        <article class="intro-mario intro">
+          <a href="mario/mario.html">
+            <div class="mario">
+              <video
+                loop="loop"
+                preload="auto"
+                muted
+                width="1920px"
+                height="1080px"
+              >
+                <source src="img/mario.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="mario2"></div>
+            <div class="mario3">
+              <img src="img/mario-logo.png" alt="logo" />
+            </div>
+          </a>
+        </article>
+        <article class="intro-kirby intro">
+          <a href="kirby/kirby.html">
+            <div class="kirby">
+              <video
+                loop="loop"
+                preload="auto"
+                muted
+                width="1920px"
+                height="1080px"
+              >
+                <source src="img/kirby.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="kirby2"></div>
+            <div class="kirby3">
+              <img src="img/kirby-logo.png" alt="logo" />
+            </div>
+          </a>
+        </article>
+        <article class="intro-poketmon intro">
+          <a href="pokemon/pokemon.html">
+            <div class="poketmon">
+              <video
+                loop="loop"
+                preload="auto"
+                muted
+                width="1920px"
+                height="1080px"
+              >
+                <source src="img/poketmon.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="poketmon2"></div>
+            <div class="poketmon3">
+              <img src="img/poketmon-logo.png" alt="logo" />
+            </div>
+          </a>
+        </article>
+        <article class="intro-mds intro">
+          <a href="mds/mds.html">
+            <div class="mds">
+              <video
+                loop="loop"
+                preload="auto"
+                muted
+                width="1920px"
+                height="1080px"
+              >
+                <source src="img/mds.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="mds2"></div>
+            <div class="mds3"><img src="img/mds-logo.png" alt="logo" /></div>
+          </a>
+        </article>
+      </section>
+
+      <footer>
+        <span>copyright 2023 Nintendo All right reserved.</span>
+      </footer>
+    </div>
+
+    <div class="popup">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <h3 class="notice">NOTICE</h3>
+      <p class="pop">
+        본 사이트는 모니터 화면 1920px에 최적화 되어있으며, 상업용 목적이
+        아닌<br />
+        <span>개인 포트폴리오 용도</span>로 제작 되었습니다.<br />
+        홈페이지의 일부 내용과 기타 이미지 등은<br />
+        출처가 따로 있음을 밝힙니다.
+      </p>
+      <div class="close cf">
+        <input type="checkbox" id="close" />
+        <label for="close">오늘 하루 열지 않음</label>
+        <span>닫기</span>
+      </div>
+    </div>
+
+    <script>
+      const loader = document.querySelector(".loader");
+      const html = document.querySelector("html");
+
+      html.style.overflow = "hidden"; //로딩 중 스크롤 방지
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          //로딩속도 구현
+
+          loader.style.opacity = "0";
+          html.style.overflow = "auto"; //스크롤 방지 해제
+
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 0);
+        }, 12000); //지속시간
+      });
+
+      const mainGroup = document.querySelector(".main");
+      const mainPaths = mainGroup.querySelectorAll("path");
+      mainPaths.forEach((path, index) => {
+        const length = path.getTotalLength();
+        path.style.setProperty("--length", length);
+
+        path.style.setProperty("--duration", length * 2.5 + "ms");
+      });
+      const bgGroup = document.querySelector(".main-bg");
+      const bgPaths = bgGroup.querySelectorAll("path");
+      bgPaths.forEach((path, index) => {
+        const length = path.getTotalLength();
+        path.style.setProperty("--length", length);
+
+        path.style.setProperty("--duration", length * 2.5 + "ms");
+      });
+    </script>
+  </body>
+</html>

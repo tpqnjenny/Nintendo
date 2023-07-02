@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+#jpolice {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/header_bg.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#jpolice::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, transparent, #0005, #0004);
+  z-index: 1010;
+  pointer-events: none;
+}
+.char {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 18%;
+  z-index: 10;
+}
+.char img {
+  width: 100%;
+}
+.scroll {
+  width: calc(100%+400px);
+  left: -400px;
+  display: flex;
+  color: #fff;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(calc(var(--d) * 1deg)) translateY(calc(var(--y) * 1px));
+  z-index: 2000;
+}
+.scroll > div {
+  background: #e9c804;
+  color: #1d1104;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: police 60s linear infinite;
+  animation-delay: -60s;
+}
+.scroll > div:nth-child(2) {
+  animation: police1 60s linear infinite;
+  animation-delay: -30s;
+}
+@keyframes police {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes police1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+#glich {
+  height: 150px;
+  position: absolute;
+  top: 0;
+  padding-top: 5px;
+  left: 41%;
+  z-index: 1200;
+}
+#glich > h1 {
+  display: inline-block;
+  font-size: 5rem;
+  color: #f1f1f1;
+  position: relative;
+  transform: skew(var(--skew));
+  transform: skew(var(--skew)) scale(var(--scale));
+}
+
+#glich > h1::after,
+#glich > h1::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  transition: clip-path 50ms ease-in;
+  /* background-color: rgb(0, 0, 31); */
+}
+#glich > h1::before {
+  left: 5px;
+  text-shadow: 2px -2px #2a96d4;
+  clip-path: polygon(0 var(--t1), 100% var(--t1), 100% var(--b1), 0 var(--b1));
+}
+
+#glich > h1::after {
+  left: -5px;
+  text-shadow: -2px 2px #cc2a1f;
+  clip-path: polygon(0 var(--t2), 100% var(--t2), 100% var(--b2), 0 var(--b2));
+}
+.lobg {
+  position: absolute;
+  width: 100%;
+  background: var(--bg);
+  height: 120px;
+}
+.tv {
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  z-index: 1010;
+  width: 700px;
+  height: 440px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.tv img {
+  width: 100%;
+}
